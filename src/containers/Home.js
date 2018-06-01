@@ -3,12 +3,14 @@ import { withSiteData } from 'react-static'
 import styled from 'styled-components';
 import Logo from 'components/Logo';
 
+const deskImage = 'images/desk.svg';
+
 export default withSiteData(() => (
   <Home>
     <h1>EVAN GODON</h1>
-    <h2>Front End Web Developer</h2>
+    <h2>Front-End Web Developer</h2>
 
-    <img src="images/svg-desk.svg" alt="desk"/>
+    <img src={deskImage} width={600} alt="desk"/>
   </Home>
 ))
 
@@ -18,7 +20,7 @@ const Home = styled.main`
   align-items: center;
   flex-direction: column;
   grid-column: 3 / 5;
-  color: #222;
+  color:#222;
 
   h1 {
     font-size: 3.8rem;

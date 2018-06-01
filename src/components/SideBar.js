@@ -6,17 +6,19 @@ import Icon, { icons } from './Icon';
 import Button from './Button';
 
 const Nav = styled.nav`
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #212121;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 56rem;
   z-index: 5;
+  color: var(--color-sidebar-text);
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0 .7rem;
+  padding: 0 0.7rem;
 `;
 
 const NavList = styled.div`
@@ -37,7 +39,7 @@ const StyleNavLink = styled(NavLink)`
     left: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-dark));
+    background: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
     transform: scaleY(0);
     transition: transform 0.3s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
     z-index: -1;
@@ -89,6 +91,8 @@ const Icons = styled.div`
   }
 `;
 
+const bottomIconViewBox = "0 0 10 10";
+
 const SideBar = () => (
   <Nav>
     <LogoContainer>
@@ -96,7 +100,7 @@ const SideBar = () => (
     </LogoContainer>
     <NavList>
       <StyleNavLink exact to="/">
-        <Icon icon={icons.HOME} />
+        <Icon icon={icons.HOME} si />
         HOME
       </StyleNavLink>
       <StyleNavLink to="/about">
@@ -116,13 +120,13 @@ const SideBar = () => (
     <FooterBottom>
       <Icons>
         <a href="mailto:e.godon@outlook.com" target="_blank" title="Email">
-          <Icon icon={icons.EMAIL} size={25} />
+          <Icon icon={icons.EMAIL} viewBox={bottomIconViewBox}/>
         </a>
         <a href="https://github.com/egodon" target="_blank" title="GitHub">
-          <Icon icon={icons.GITHUB} size={25} />
+          <Icon icon={icons.GITHUB} viewBox={bottomIconViewBox}/>
         </a>
         <a href="https://www.linkedin.com/in/egodon" target="_blank" title="Linkedin">
-          <Icon icon={icons.LINKEDIN} size={25} />
+          <Icon icon={icons.LINKEDIN} viewBox={bottomIconViewBox}/>
         </a>
       </Icons>
       <Button color="#eee">DOWNLOAD CV</Button>

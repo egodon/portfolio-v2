@@ -1,4 +1,5 @@
 import React from 'react';
+import { COLOR } from '../index.css';  
 
 const Logo = ({ size }) => (
   <div>
@@ -13,12 +14,12 @@ const Logo = ({ size }) => (
       xmlSpace="preserve"
     >
       <linearGradient id="Gradient1">
-        <stop offset="0%" stopColor="#2E3192" />
-        <stop offset="100%" stopColor="#22aaaa" />
+        <stop offset="0%" stopColor={COLOR.PRIMARY_DARK} />
+        <stop offset="100%" stopColor={COLOR.PRIMARY} />
       </linearGradient>
       <linearGradient id="Gradient2">
-        <stop offset="0%" stopColor="#d69735" />
-        <stop offset="100%" stopColor="#D4145A" />
+        <stop offset="0%" stopColor={COLOR.PRIMARY} />
+        <stop offset="100%" stopColor={COLOR.PRIMARY_LIGHT} />
       </linearGradient>
 
       <defs id="defs3703" />

@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "d3-ease": "^1.0.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-move": "^2.7.0",
     "react-router": "^4.2.0",
     "react-static": "^5.8.5",
+    "recompose": "^0.27.0",
     "styled-components": "^3",
     "trianglify": "^1.2.0"
   },
