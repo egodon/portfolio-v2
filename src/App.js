@@ -17,7 +17,6 @@ const AppStyles = styled.div`
     font-size: 1.6rem;
     padding: 15rem 0;
     min-height: 114rem;
-    border: 1px solid tomato;
   }
 `;
 

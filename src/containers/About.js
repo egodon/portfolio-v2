@@ -41,7 +41,7 @@ const About = styled.div`
   h2 {
     text-transform: uppercase;
     font-size: var(--fs-large);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .main {

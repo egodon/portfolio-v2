@@ -53,7 +53,7 @@ const Projects = styled.div`
 
   h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 `;
 
