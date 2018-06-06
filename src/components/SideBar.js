@@ -111,10 +111,6 @@ const SideBar = () => (
         <Icon icon={icons.CODE} />
         PROJECTS
       </StyleNavLink>
-      <StyleNavLink to="/contact">
-        <Icon icon={icons.ENVELOPE} />
-        CONTACT
-      </StyleNavLink>
     </NavList>
 
     <FooterBottom>

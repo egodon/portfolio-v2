@@ -15,10 +15,9 @@ const AppStyles = styled.div`
 
   .content {
     font-size: 1.6rem;
-    padding: 20rem 10rem;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    padding: 15rem 0;
     min-height: 114rem;
+    border: 1px solid tomato;
   }
 `;
 

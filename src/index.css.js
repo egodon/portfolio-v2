@@ -8,8 +8,13 @@ export const COLOR = {
   PRIMARY_DARK: '#1976D2',
 };
 
+export const COLOR_RGB = {
+  PRIMARY_DARK: hexToRgb(COLOR.PRIMARY_DARK),
+  PRIMARY_LIGHT: hexToRgb(COLOR.PRIMARY_LIGHT),
+};
+
 export const FONT_SIZE = {
-  LARGE: '2.8rem' 
+  LARGE: '2.8rem',
 };
 injectGlobal`
   html {
@@ -37,7 +42,9 @@ injectGlobal`
     --color-main-text: ${COLOR.MAIN_TEXT};
     --color-primary: ${COLOR.PRIMARY};
     --color-primary-light: ${COLOR.PRIMARY_LIGHT};
+    --color-primary-light-rgb: ${COLOR.PRIMARY_LIGHT_RGB};
     --color-primary-dark: ${COLOR.PRIMARY_DARK};
+    --color-primary-dark-rgb: ${COLOR.PRIMARY_DARK_RGB};
 
     --fs-large: ${FONT_SIZE.LARGE}
   }
@@ -88,12 +95,12 @@ a {
 
 `;
 
-/*--- Helpers --*/
-export const hexToRgb = (hex) => {
+/* --- Helpers --*/
+export function hexToRgb (hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? 
-      `${parseInt(result[1], 16).toString()},` +
-      `${parseInt(result[2], 16).toString()},` +
-      `${parseInt(result[3], 16).toString()}`
-  : null;
-}
+  return result
+    ? `${parseInt(result[1], 16).toString()},` +
+        `${parseInt(result[2], 16).toString()},` +
+        `${parseInt(result[3], 16).toString()}`
+    : null;
+};
