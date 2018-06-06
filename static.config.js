@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 export default {
+  siteRoot: 'https://egodon.me/',
   getSiteData: () => ({
     title: 'Evan Godon',
   }),
@@ -52,4 +53,5 @@ export default {
       );
     }
   },
+
 };
