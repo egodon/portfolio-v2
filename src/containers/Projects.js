@@ -1,11 +1,12 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static';
+import { withRouteData } from 'react-static';
 import styled from 'styled-components';
 import ProjectCard from 'components/ProjectCard';
+import { PageTitle } from './Home';
 
-export default withRouteData(({ posts }) => (
+export default withRouteData(() => (
   <Projects>
-    <h2>PROJECTS</h2>
+    <PageTitle>PROJECTS</PageTitle>
 
     <FlexContainer>
       <ProjectCard
@@ -50,11 +51,6 @@ export default withRouteData(({ posts }) => (
 const Projects = styled.div`
   max-width: 180rem;
   margin: 0 auto;
-
-  h2 {
-    text-align: center;
-    margin-bottom: 5rem;
-  }
 `;
 
 const FlexContainer = styled.div`

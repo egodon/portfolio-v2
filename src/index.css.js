@@ -14,7 +14,7 @@ export const COLOR_RGB = {
 };
 
 export const FONT_SIZE = {
-  LARGE: '2.8rem',
+  LARGE: '3.4rem',
 };
 injectGlobal`
   html {
@@ -67,24 +67,24 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 
 
@@ -103,4 +103,4 @@ export function hexToRgb (hex) {
         `${parseInt(result[2], 16).toString()},` +
         `${parseInt(result[3], 16).toString()}`
     : null;
-};
+}

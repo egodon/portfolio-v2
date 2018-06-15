@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { PageTitle } from './Home';
 
 const personAtDesk = 'images/person-at-desk.svg';
 const code = 'images/code.svg';
 const paintbrush = 'images/paintbrush.svg';
 const lines = 'images/gray-lines.svg';
 
+
 export default () => (
   <About>
-    <h2>About</h2>
+    <PageTitle>About</PageTitle>
     <div className="main">
       <img src={personAtDesk} width={300} alt="person at a desk" className="desk-svg" />
       <p>
@@ -37,12 +39,6 @@ const About = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  h2 {
-    text-transform: uppercase;
-    font-size: var(--fs-large);
-    margin-bottom: 5rem;
-  }
 
   .main {
     display: flex;

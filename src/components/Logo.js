@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR } from '../index.css';  
+import { COLOR } from '../index.css';
 
 const Logo = ({ size }) => (
   <div>
@@ -96,6 +96,6 @@ const Logo = ({ size }) => (
 
 Logo.defaultProps = {
   size: 60,
-}
+};
 
 export default Logo;

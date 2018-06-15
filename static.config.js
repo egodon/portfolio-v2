@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { Component } from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -46,6 +45,10 @@ export default {
           <Head>
             <meta charSet="UTF-8" />
               <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+                  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+                    <link rel="manifest" href="/site.webmanifest" />
+                      <meta name="theme-color" content="#ffffff" />
             {renderMeta.styleTags}
           </Head>
             <Body>{children}</Body>
@@ -53,5 +56,4 @@ export default {
       );
     }
   },
-
 };

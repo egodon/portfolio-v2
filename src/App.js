@@ -15,8 +15,9 @@ const AppStyles = styled.div`
 
   .content {
     font-size: 1.6rem;
-    padding: 32rem 0;
+    padding: 20rem 0;
     min-height: 114rem;
+    overflow-Y: auto;
   }
 `;
 
