@@ -2,7 +2,7 @@ import { injectGlobal } from 'styled-components';
 
 export const COLOR = {
   SIDEBAR_TEXT: '#eee',
-  MAIN_TEXT: '#424242',
+  MAIN_TEXT: '#2d2c2c',
   PRIMARY: '#2196F3',
   PRIMARY_LIGHT: '#42A5F5',
   PRIMARY_DARK: '#1976D2',
@@ -16,6 +16,7 @@ export const COLOR_RGB = {
 export const FONT_SIZE = {
   LARGE: '3.4rem',
 };
+
 injectGlobal`
   html {
     font-size: 62.5%;

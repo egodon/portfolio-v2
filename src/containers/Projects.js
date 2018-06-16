@@ -67,7 +67,7 @@ const FlexContainer = styled.div`
 const project_1_title = 'React HackerNews';
 const project_1_image = 'images/hackernews.png';
 const project_1_builtWith = ['React'];
-const project_1_gitHubLink = 'https://github.com/egodon/portfolio';
+const project_1_gitHubLink = 'https://github.com/egodon/react-hacker-news';
 const project_1_demoLink = 'https://hacker-news.gq/';
 
 /* PROJECT 2 */

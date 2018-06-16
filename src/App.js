@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Link } from 'react-static';
-import styled, { injectGlobal } from 'styled-components';
+import { Router } from 'react-static';
+import styled from 'styled-components';
 import { hot } from 'react-hot-loader';
 import Routes from 'react-static-routes';
 
@@ -15,7 +15,7 @@ const AppStyles = styled.div`
 
   .content {
     font-size: 1.6rem;
-    padding: 20rem 0;
+    padding: 12% 0;
     min-height: 114rem;
     overflow-Y: auto;
   }

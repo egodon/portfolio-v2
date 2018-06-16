@@ -54,7 +54,8 @@ const CardOverlay = styled.div`
   opacity: 0;
   transition: all 0.2s;
   color: #eee;
-  background-color: rgba(${COLOR_RGB.PRIMARY_DARK}, 0.87);
+  background-color: rgba(${COLOR_RGB.PRIMARY_DARK}, 0.9);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 
   .title {
     font-size: 2.4rem;
