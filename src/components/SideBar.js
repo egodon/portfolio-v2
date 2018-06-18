@@ -5,6 +5,58 @@ import Logo from './Logo';
 import Icon, { icons } from './Icon';
 import Button from './Button';
 
+const SideBar = () => (
+  <Nav>
+    <LogoContainer>
+      <Logo size={100} />
+    </LogoContainer>
+    <NavList>
+      <StyleNavLink exact to="/">
+        <Icon icon={icons.HOME} si />
+        HOME
+      </StyleNavLink>
+      <StyleNavLink to="/about">
+        <Icon icon={icons.USER} />
+        ABOUT
+      </StyleNavLink>
+      <StyleNavLink to="/projects">
+        <Icon icon={icons.CODE} />
+        PROJECTS
+      </StyleNavLink>
+    </NavList>
+
+    <FooterBottom>
+      <Icons>
+        <a
+          href="mailto:e.godon@outlook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Email"
+        >
+          <Icon icon={icons.EMAIL} viewBox={bottomIconViewBox} />
+        </a>
+        <a
+          href="https://github.com/egodon"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub"
+        >
+          <Icon icon={icons.GITHUB} viewBox={bottomIconViewBox} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/egodon"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Linkedin"
+        >
+          <Icon icon={icons.LINKEDIN} viewBox={bottomIconViewBox} />
+        </a>
+      </Icons>
+      <Button color="#eee">DOWNLOAD CV</Button>
+    </FooterBottom>
+  </Nav>
+);
+
 const Nav = styled.nav`
   background-color: #212121;
   height: 100vh;
@@ -91,43 +143,6 @@ const Icons = styled.div`
   }
 `;
 
-const bottomIconViewBox = "0 0 10 10";
-
-const SideBar = () => (
-  <Nav>
-    <LogoContainer>
-      <Logo size={100} />
-    </LogoContainer>
-    <NavList>
-      <StyleNavLink exact to="/">
-        <Icon icon={icons.HOME} si />
-        HOME
-      </StyleNavLink>
-      <StyleNavLink to="/about">
-        <Icon icon={icons.USER} />
-        ABOUT
-      </StyleNavLink>
-      <StyleNavLink to="/projects">
-        <Icon icon={icons.CODE} />
-        PROJECTS
-      </StyleNavLink>
-    </NavList>
-
-    <FooterBottom>
-      <Icons>
-        <a href="mailto:e.godon@outlook.com" target="_blank" title="Email">
-          <Icon icon={icons.EMAIL} viewBox={bottomIconViewBox}/>
-        </a>
-        <a href="https://github.com/egodon" target="_blank" title="GitHub">
-          <Icon icon={icons.GITHUB} viewBox={bottomIconViewBox}/>
-        </a>
-        <a href="https://www.linkedin.com/in/egodon" target="_blank" title="Linkedin">
-          <Icon icon={icons.LINKEDIN} viewBox={bottomIconViewBox}/>
-        </a>
-      </Icons>
-      <Button color="#eee">DOWNLOAD CV</Button>
-    </FooterBottom>
-  </Nav>
-);
+const bottomIconViewBox = '0 0 10 10';
 
 export default SideBar;
