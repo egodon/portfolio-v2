@@ -30,7 +30,7 @@ export default () => (
       </div>
       <div>
         <img src={fuelGauge} alt="fuel-gauge" />
-        <p>I optimize my code to ensure fast load times.</p>
+        <p>I optimize my code and follow best practices to ensure fast load times.</p>
       </div>
       <div>
         <img src={lines} alt="lines" />

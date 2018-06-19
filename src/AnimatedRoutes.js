@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Route, Link, cleanPath } from 'react-static'
-import { easeQuadOut } from 'd3-ease'
+import { easeSinInOut } from 'd3-ease'
 import { NodeGroup } from 'react-move'
 import { withContext, getContext } from 'recompose'
 import PropTypes from 'prop-types'
@@ -51,7 +51,7 @@ const AnimatedRoutes = getContext({
           enter={() => ({
             opacity: [1],
             translateY: [0],
-            timing: { duration: 200, delay: 200, ease: easeQuadOut },
+            timing: { duration: 200, delay: 200, ease: easeSinInOut },
           })}
           update={() => ({
             opacity: [1],
@@ -59,7 +59,7 @@ const AnimatedRoutes = getContext({
           leave={() => ({
             opacity: [0],
             translateY: [-10],
-            timing: { duration: 200, ease: easeQuadOut },
+            timing: { duration: 200, ease: easeSinInOut },
           })}
         >
           {nodes => (

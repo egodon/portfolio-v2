@@ -90,18 +90,18 @@ const StyleNavLink = styled(NavLink)`
     position: absolute;
     left: 0;
     height: 100%;
-    width: 3px;
-    background: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
+    width: 0;
     transform: scaleY(0);
-    transition: transform 0.3s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+    background: linear-gradient(to bottom right, var(--color-primary-dark), var(--color-primary));
+    transition: transform 0.3s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.16s, background-color 0.1s;
     z-index: -1;
   }
 
   &.active::before,
   &:hover::before,
   &--active::before {
-    transform: scaleY(1);
     width: 100%;
+    transform: scaleY(1);
   }
 
   svg {

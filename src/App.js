@@ -11,7 +11,7 @@ import './index.css';
 
 const AppStyles = styled.div`
   display: grid;
-  grid-template-columns: [sidebar-start] 25rem [sidebar-end] 1fr;
+  grid-template-columns: [sidebar-start] 27rem [sidebar-end] 1fr;
 
   .content {
     font-size: 1.6rem;

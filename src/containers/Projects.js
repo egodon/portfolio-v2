@@ -6,7 +6,7 @@ import { PageTitle } from './Home';
 
 export default withRouteData(() => (
   <Projects>
-    <PageTitle>PROJECTS</PageTitle>
+    <PageTitle>Projects</PageTitle>
 
     <FlexContainer>
       <ProjectCard
