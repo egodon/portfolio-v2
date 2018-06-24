@@ -3,93 +3,78 @@ import { COLOR } from '../index.css';
 
 const Logo = ({ size }) => (
   <div>
+    {/* ?xml version="1.0" encoding="UTF-8" standalone="no"? */}
     <svg
-      id="Layer_1"
-      x="0px"
-      y="0px"
       width={size}
       height={size}
-      fill="transparent"
-      viewBox="0 0 258 258"
+      viewBox="0 0 100 60"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlSpace="preserve"
+      style={{
+        fillRule: 'evenodd',
+        clipRule: 'evenodd',
+        strokeLinejoin: 'round',
+        strokeMiterlimit: '1.41421',
+      }}
     >
-      <linearGradient id="Gradient1">
-        <stop offset="0%" stopColor={COLOR.PRIMARY_DARK} />
-        <stop offset="100%" stopColor={COLOR.PRIMARY} />
-      </linearGradient>
-      <linearGradient id="Gradient2">
-        <stop offset="0%" stopColor={COLOR.PRIMARY} />
-        <stop offset="100%" stopColor={COLOR.PRIMARY_LIGHT} />
-      </linearGradient>
-
-      <defs id="defs3703" />
-      <rect x="30.64469" y="59.80114" width="199.776" height="139.864" id="rect3680" />
-      <rect
-        x="44.89069"
-        y="116.00114"
-        width="79.918999"
-        height="25.455999"
-        id="rect3682"
-        fill="url(#Gradient1)"
-      />
-      {/* Left Rectangle */}
-      <rect
-        x="173.29268"
-        y="116.31713"
-        width="42.109001"
-        height="25.457001"
-        id="rect3684"
-        fill="url(#Gradient2)"
-      />
-      {/* Right Rectangle */}
-      <rect
-        x="44.89069"
-        y="74.267136"
-        width="79.918999"
-        height="25.455999"
-        id="rect3686"
-        fill="#bbbcbf"
-      />
-      <rect
-        x="134.93768"
-        y="74.267136"
-        width="81.007004"
-        height="25.455999"
-        id="rect3688"
-        fill="#bbbcbf"
-      />
-      <rect
-        x="44.89069"
-        y="159.21715"
-        width="79.918999"
-        height="25.455999"
-        id="rect3690"
-        fill="#bbbcbf"
-      />
-      <rect
-        x="135.47969"
-        y="159.21715"
-        width="79.921997"
-        height="25.455999"
-        id="rect3692"
-        fill="#bbbcbf"
-      />
-      <rect
-        x="134.93768"
-        y="74.267136"
-        width="27.233"
-        height="110.406"
-        id="rect3694"
-        fill="#bbbcbf"
-      />
-      <rect
-        x="188.16968"
-        y="148.56514"
-        width="27.232"
-        height="35.556"
-        id="rect3696"
-        fill="#bbbcbf"
-      />
+      <g transform="matrix(0.96252,0,0,0.894638,6.43929e-15,0)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'rgb(187,188,191)' }} />
+      </g>
+      <g transform="matrix(6.7506e-17,1.05529,-1.0447,6.12323e-17,71.3393,-1.97215e-31)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'rgb(187,188,191)' }} />
+      </g>
+      <g transform="matrix(1.0447,0,0,0.894638,53.0393,0)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'rgb(187,188,191)' }} />
+      </g>
+      <g transform="matrix(0.52235,0,0,0.933639,76.5197,21.4812)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'url(#_Linear1)' }} />
+      </g>
+      <g transform="matrix(1.0447,0,0,0.898814,53.0393,44.2556)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'rgb(187,188,191)' }} />
+      </g>
+      <g transform="matrix(0.96252,0,0,0.894638,-7.10543e-15,22.1644)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'url(#_Linear2)' }} />
+      </g>
+      <g transform="matrix(0.96252,0,0,0.898814,6.43929e-15,44.2556)">
+        <rect x={0} y={0} width="44.951" height="17.517" style={{ fill: 'rgb(187,188,191)' }} />
+      </g>
+      <g transform="matrix(1.0447,0,0,0.596847,-4.46994,18.9407)">
+        <rect
+          x="84.662"
+          y="38.758"
+          width="15.338"
+          height="7.312"
+          style={{ fill: 'rgb(187,188,191)' }}
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="_Linear1"
+          x1={0}
+          y1={0}
+          x2={1}
+          y2={0}
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="matrix(44.9514,0,0,17.5169,0,8.75846)"
+        >
+          <stop offset={0} style={{ stopColor: COLOR.PRIMARY, stopOpacity: 1 }} />
+          <stop offset={1} style={{ stopColor: COLOR.PRIMARY_LIGHT, stopOpacity: 1 }} />
+        </linearGradient>
+        <linearGradient
+          id="_Linear2"
+          x1={0}
+          y1={0}
+          x2={1}
+          y2={0}
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="matrix(44.9514,0,0,17.5169,0,8.75846)"
+        >
+          <stop offset={0} style={{ stopColor: COLOR.PRIMARY_DARK, stopOpacity: 1 }} />
+          <stop offset={1} style={{ stopColor: COLOR.PRIMARY, stopOpacity: 1 }} />
+        </linearGradient>
+      </defs>
     </svg>
   </div>
 );

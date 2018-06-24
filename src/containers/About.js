@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PageTitle } from './Home';
+import { BREAKPOINT } from '../index.css';
 
 const personAtDesk = 'images/person-at-desk.svg';
 const code = 'images/code.svg';
@@ -66,6 +67,12 @@ const Icons = styled.div`
   justify-items: center;
   width: 100%;
   max-width: 100rem;
+
+  @media (max-width: ${BREAKPOINT.SMALL}px) {
+  grid-template-columns: auto;
+  grid-template-rows: repeat(1fr, 4);
+    
+  }
 
   div {
     width: 34rem;

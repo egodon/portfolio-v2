@@ -17,10 +17,38 @@ export const FONT_SIZE = {
   LARGE: '3.4rem',
 };
 
+export const BREAKPOINT = {
+  LARGE: 1400,
+  MEDIUM: 900,
+  SMALL: 700,
+};
+
 injectGlobal`
+  :root {
+    /*--- Variables ---*/
+    --color-sidebar-text: ${COLOR.SIDEBAR_TEXT};
+    --color-main-text: ${COLOR.MAIN_TEXT};
+    --color-primary: ${COLOR.PRIMARY};
+    --color-primary-light: ${COLOR.PRIMARY_LIGHT};
+    --color-primary-light-rgb: ${COLOR.PRIMARY_LIGHT_RGB};
+    --color-primary-dark: ${COLOR.PRIMARY_DARK};
+    --color-primary-dark-rgb: ${COLOR.PRIMARY_DARK_RGB};
+
+    --fs-large: ${FONT_SIZE.LARGE};
+
+    --bp-large: 1400px;
+    --bp-medium: 900px;
+  }
+
+
   html {
     font-size: 62.5%;
+    
+    @media (max-width: ${BREAKPOINT.LARGE}px) {
+        font-size: 50%;
+    }
   }
+
 
   * {
       box-sizing: border-box;
@@ -32,22 +60,8 @@ injectGlobal`
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-X: hidden;
     color: var(--color-main-text);
-    
-  }
-
-  :root {
-    /*--- Variables ---*/
-    --color-sidebar-text: ${COLOR.SIDEBAR_TEXT};
-    --color-main-text: ${COLOR.MAIN_TEXT};
-    --color-primary: ${COLOR.PRIMARY};
-    --color-primary-light: ${COLOR.PRIMARY_LIGHT};
-    --color-primary-light-rgb: ${COLOR.PRIMARY_LIGHT_RGB};
-    --color-primary-dark: ${COLOR.PRIMARY_DARK};
-    --color-primary-dark-rgb: ${COLOR.PRIMARY_DARK_RGB};
-
-    --fs-large: ${FONT_SIZE.LARGE}
   }
 
   p {

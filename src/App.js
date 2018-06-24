@@ -7,17 +7,34 @@ import Routes from 'react-static-routes';
 import AnimatedRoutes from './AnimatedRoutes';
 import Background from './components/Background';
 import SideBar from './components/SideBar';
-import './index.css';
+import { BREAKPOINT } from './index.css';
 
 const AppStyles = styled.div`
   display: grid;
   grid-template-columns: [sidebar-start] 27rem [sidebar-end] 1fr;
+  height: 100vh;
+  width: 100vw;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 10rem;
+  }
 
   .content {
     font-size: 1.6rem;
-    padding: 12% 0;
-    min-height: 114rem;
-    overflow-Y: auto;
+    padding: 14% 0;
+    overflow-y: auto;
+    height: 100%;
+
+    @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+      grid-row: 1 / 2;
+    }
+
+  }
+
+  .animated-routes-container {
+    position: relative;
+    grid-column: 1 / 7;
   }
 `;
 

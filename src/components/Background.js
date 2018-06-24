@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import Trianglify from 'trianglify';
 import styled from 'styled-components';
 
 import { COLOR } from '../index.css';

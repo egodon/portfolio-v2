@@ -4,11 +4,12 @@ import { NavLink } from 'react-static';
 import Logo from './Logo';
 import Icon, { icons } from './Icon';
 import Button from './Button';
+import { BREAKPOINT } from '../index.css';
 
 const SideBar = () => (
   <Nav>
     <LogoContainer>
-      <Logo size={100} />
+      <Logo size={56} />
     </LogoContainer>
     <NavList>
       <StyleNavLink exact to="/">
@@ -65,16 +66,44 @@ const Nav = styled.nav`
   min-height: 56rem;
   z-index: 5;
   color: var(--color-sidebar-text);
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    justify-content: center;
+    align-items: center;
+    grid-row: 2 / 3;
+    flex-direction: row;
+    min-height: auto;
+    height: auto;
+    width: 100vw;
+  }
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    justify-content: space-space-evenly;
+  }
+
+  @media (max-width: ${BREAKPOINT.SMALL}px) {
+    position: fixed;
+    bottom: 0;
+  }
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 0 0.7rem;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    margin-right: 1rem;
+  }
 `;
 
 const NavList = styled.div`
   align-self: stretch;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const StyleNavLink = styled(NavLink)`
@@ -84,6 +113,11 @@ const StyleNavLink = styled(NavLink)`
   grid-template-columns: 8rem 1fr;
   align-items: center;
   position: relative;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    padding: 1rem;
+    grid-template-columns: auto;
+  }
 
   &::before {
     content: '';
@@ -108,6 +142,12 @@ const StyleNavLink = styled(NavLink)`
     grid-column: 1 / 2;
     justify-self: flex-end;
     margin-right: 2rem;
+
+    @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+      justify-self: center;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
 
   a {
@@ -123,6 +163,15 @@ const FooterBottom = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  @media (max-width: ${BREAKPOINT.SMALL}px) {
+    display: none;
+  }
 `;
 
 const Icons = styled.div`

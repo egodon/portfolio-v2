@@ -2,12 +2,13 @@ import React from 'react';
 import { withSiteData } from 'react-static';
 import styled from 'styled-components';
 import SpanAnimate from 'components/SpanAnimate';
+import { BREAKPOINT } from '../index.css';
 
 const deskImage = 'images/desk.svg';
 
 export default withSiteData(() => (
   <Home>
-    <div className="text-container">
+    <div className="header-container">
       <SpanAnimate delay={1.6}>
         <h1>EVAN GODON</h1>
       </SpanAnimate>
@@ -16,7 +17,7 @@ export default withSiteData(() => (
       </SpanAnimate>
     </div>
 
-    <img src={deskImage} width={600} alt="desk" />
+    <img src={deskImage} alt="desk" />
   </Home>
 ));
 
@@ -26,13 +27,16 @@ const Home = styled.main`
   flex-direction: column;
   grid-column: 3 / 5;
 
-  .text-container {
+  @media (max-width: ${BREAKPOINT.SMALL}px) {
+    margin-top: 10rem;
+  }
+
+  .header-container {
     height: 9rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
   }
 
   h1 {
@@ -41,6 +45,10 @@ const Home = styled.main`
     position: relative;
     left: 4px;
     z-index: -1;
+
+    @media (max-width: ${BREAKPOINT.SMALL}px) {
+      letter-spacing: 5px;
+    }
   }
 
   h2 {
@@ -50,8 +58,14 @@ const Home = styled.main`
     padding: 2px;
   }
 
-  img{
-    margin-top: 4rem;    
+  img {
+    margin-top: 4rem;
+    width: 60rem;
+
+    @media (max-width: ${BREAKPOINT.SMALL}px) {
+      margin-top: 6rem;
+      width: 40rem;
+    }
   }
 `;
 

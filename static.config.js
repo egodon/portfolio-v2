@@ -49,7 +49,7 @@ export default {
                   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
                     <link rel="manifest" href="/site.webmanifest" />
                       <meta name="theme-color" content="#ffffff" />
-                      <title>Evan Godon</title>
+                        <title>Evan Godon</title>
             {renderMeta.styleTags}
           </Head>
             <Body>{children}</Body>

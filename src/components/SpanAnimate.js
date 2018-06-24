@@ -21,8 +21,8 @@ const spanWidth = keyframes`
 `;
 
 const hideDelay = keyframes`
-  from { visibility: hidden;}
-  to { visibility: visible;}
+  from { visibility: hidden; }
+  to { visibility: visible; } 
 `;
 
 const Span = styled.span`

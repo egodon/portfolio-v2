@@ -63,7 +63,7 @@ const AnimatedRoutes = getContext({
           })}
         >
           {nodes => (
-            <div style={{ position: 'relative', gridColumn: '1  / 7' }}>
+            <div className='animated-routes-container'>
               {nodes.map(({ key, data, state: { opacity, translateY } }) => {
                 const PreservedRouterContext = withContext(
                   {
