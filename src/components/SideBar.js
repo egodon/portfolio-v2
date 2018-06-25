@@ -9,7 +9,7 @@ import { BREAKPOINT } from '../index.css';
 const SideBar = () => (
   <Nav>
     <LogoContainer>
-      <Logo size={56} />
+      <Logo size={60} />
     </LogoContainer>
     <NavList>
       <StyleNavLink exact to="/">
@@ -90,10 +90,17 @@ const Nav = styled.nav`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-self: center;
   padding: 0 0.7rem;
+  margin: 1.2rem 0;
+  position: relative;
+  right: 5px;
 
   @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    margin: 0;
     margin-right: 1rem;
+    position: static;
+    right: 5px;
   }
 `;
 
