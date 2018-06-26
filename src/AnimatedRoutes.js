@@ -8,7 +8,6 @@ import { hot } from 'react-hot-loader'
 
 import Routes from 'react-static-routes';
 
-let isInitialLoad = true;
 
 const AnimatedRoutes = getContext({
   router: PropTypes.object,
@@ -23,13 +22,8 @@ const AnimatedRoutes = getContext({
         Comp = getComponentForPath('404')
       }
 
-      if (isInitialLoad || staticURL) {
-        isInitialLoad = false;
-        return (
-          <div style={{ position: 'relative' }}>
-            <Comp {...props} />
-          </div>
-        )
+      if (staticURL) {
+        return null;
       }
 
       return (

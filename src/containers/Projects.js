@@ -9,41 +9,15 @@ export default withRouteData(() => (
     <PageTitle>Projects</PageTitle>
 
     <FlexContainer>
-      <ProjectCard
-        title={project_1_title}
-        image={project_1_image}
-        builtWith={project_1_builtWith}
-        gitHubLink={project_1_gitHubLink}
-        demoLink={project_1_demoLink}
-      />
-      <ProjectCard
-        title={project_2_title}
-        image={project_2_image}
-        builtWith={project_2_builtWith}
-        gitHubLink={project_2_gitHubLink}
-        demoLink={project_2_demoLink}
-      />
-      <ProjectCard
-        title={project_3_title}
-        image={project_3_image}
-        builtWith={project_3_builtWith}
-        gitHubLink={project_3_gitHubLink}
-        demoLink={project_3_demoLink}
-      />
-      <ProjectCard
-        title={project_4_title}
-        image={project_4_image}
-        builtWith={project_4_builtWith}
-        gitHubLink={project_4_gitHubLink}
-        demoLink={project_4_demoLink}
-      />
-      <ProjectCard
-        title={project_5_title}
-        image={project_5_image}
-        builtWith={project_5_builtWith}
-        gitHubLink={project_5_gitHubLink}
-        demoLink={project_5_demoLink}
-      />
+      {projects.map(project => (
+        <ProjectCard
+          title={project.title}
+          image={project.image}
+          builtWith={project.builtWith}
+          gitHubLink={project.gitHubLink}
+          demoLink={project.demoLink}
+        />
+      ))}
     </FlexContainer>
   </Projects>
 ));
@@ -64,37 +38,45 @@ const FlexContainer = styled.div`
 `;
 
 /* PROJECT 1 */
-const project_1_title = 'React HackerNews';
-const project_1_image = 'images/hackernews.png';
-const project_1_builtWith = ['React'];
-const project_1_gitHubLink = 'https://github.com/egodon/react-hacker-news';
-const project_1_demoLink = 'https://hacker-news.gq/';
-
-/* PROJECT 2 */
-const project_2_title = 'LinkLib';
-const project_2_image = 'images/linklib.jpg';
-const project_2_builtWith = ['jQuery', 'Sass', 'Express', 'MongoDB'];
-const project_2_gitHubLink = 'https://github.com/egodon/link-library';
-const project_2_demoLink = 'https://linklib.link/';
-
-/* PROJECT 3 */
-const project_3_title = 'ChuChat';
-const project_3_image = 'images/chuchat.jpg';
-const project_3_builtWith = ['JavaScript', 'Express', 'MongoDB', 'Socket.io'];
-const project_3_gitHubLink = 'https://github.com/egodon/chat-app';
-const project_3_demoLink = 'https://chuchat.me/';
-
-/* PROJECT 4 */
-const project_4_title = 'Scratch';
-const project_4_image = 'images/scratch.png';
-const project_4_builtWith = ['React', 'AWS Lambda'];
-const project_4_gitHubLink = 'https://github.com/egodon/scratch';
-const project_4_demoLink = 'https://scratch.netlify.com/';
-
-/* PROJECT 5 */
-
-const project_5_title = 'Portfolio';
-const project_5_image = 'images/portfolio.png';
-const project_5_builtWith = ['React-Static'];
-const project_5_gitHubLink = 'https://github.com/egodon/portfolio-v2';
-const project_5_demoLink = 'https://egodon.me';
+const projects = [
+  /* PROJECT 1 */
+  {
+    title: 'React HackerNews',
+    image: 'images/hackernews.png',
+    builtWith: ['React'],
+    gitHubLink: 'https://github.com/egodon/react-hacker-news',
+    demoLink: 'https://hacker-news.gq/',
+  },
+  /* PROJECT 2 */
+  {
+    title: 'LinkLib',
+    image: 'images/linklib.jpg',
+    builtWith: ['jQuery', 'Sass', 'Express', 'MongoDB'],
+    gitHubLink: 'https://github.com/egodon/link-library',
+    demoLink: 'https://linklib.link/',
+  },
+  /* PROJECT 3 */
+  {
+    title: 'ChuChat',
+    image: 'images/chuchat.jpg',
+    builtWith: ['JavaScript', 'Express', 'MongoDB', 'Socket.io'],
+    gitHubLink: 'https://github.com/egodon/chat-app',
+    demoLink: 'https://chuchat.me/',
+  },
+  /* PROJECT 4 */
+  {
+    title: 'Scratch',
+    image: 'images/scratch.png',
+    builtWith: ['React', 'AWS Lambda'],
+    gitHubLink: 'https://github.com/egodon/scratch',
+    demoLink: 'https://scratch.netlify.com/',
+  },
+  /* PROJECT 5 */
+  {
+    title: 'Portfolio',
+    image: 'images/portfolio.png',
+    builtWith: ['React-Static'],
+    gitHubLink: 'https://github.com/egodon/portfolio-v2',
+    demoLink: 'https://egodon.me',
+  },
+];

@@ -13,7 +13,7 @@ const SideBar = () => (
     </LogoContainer>
     <NavList>
       <StyleNavLink exact to="/">
-        <Icon icon={icons.HOME} si />
+        <Icon icon={icons.HOME} />
         HOME
       </StyleNavLink>
       <StyleNavLink to="/about">
