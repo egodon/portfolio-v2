@@ -1,62 +1,76 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-static';
 import Logo from './Logo';
 import Icon, { icons } from './Icon';
 import Button from './Button';
 import { BREAKPOINT } from '../index.css';
+import PrefetchImages from './PrefetchImages';
 
-const SideBar = () => (
-  <Nav>
-    <LogoContainer>
-      <Logo size={60} />
-    </LogoContainer>
-    <NavList>
-      <StyleNavLink exact to="/">
-        <Icon icon={icons.HOME} />
-        HOME
-      </StyleNavLink>
-      <StyleNavLink to="/about">
-        <Icon icon={icons.USER} />
-        ABOUT
-      </StyleNavLink>
-      <StyleNavLink to="/projects">
-        <Icon icon={icons.CODE} />
-        PROJECTS
-      </StyleNavLink>
-    </NavList>
+class SideBar extends Component {
+  state = {
+    shouldPrefetchImages: false,
+  };
 
-    <FooterBottom>
-      <Icons>
-        <a
-          href="mailto:e.godon@outlook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Email"
-        >
-          <Icon icon={icons.EMAIL} viewBox={bottomIconViewBox} />
-        </a>
-        <a
-          href="https://github.com/egodon"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="GitHub"
-        >
-          <Icon icon={icons.GITHUB} viewBox={bottomIconViewBox} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/egodon"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Linkedin"
-        >
-          <Icon icon={icons.LINKEDIN} viewBox={bottomIconViewBox} />
-        </a>
-      </Icons>
-      <Button color="#eee">DOWNLOAD CV</Button>
-    </FooterBottom>
-  </Nav>
-);
+  prefetchImages = () => {
+    this.setState({ shouldPrefetchImages: true });
+  };
+
+  render () {
+    return (
+      <Nav>
+        {this.state.shouldPrefetchImages && <PrefetchImages />}
+          <LogoContainer>
+            <Logo size={60} />
+          </LogoContainer>
+            <NavList>
+              <StyleNavLink exact to="/">
+                <Icon icon={icons.HOME} />
+            HOME
+              </StyleNavLink>
+                <StyleNavLink to="/about">
+                  <Icon icon={icons.USER} />
+            ABOUT
+                </StyleNavLink>
+                  <StyleNavLink to="/projects" onMouseEnter={this.prefetchImages}>
+                    <Icon icon={icons.CODE} />
+            PROJECTS
+                  </StyleNavLink>
+            </NavList>
+
+              <FooterBottom>
+                <Icons>
+                  <a
+                    href="mailto:e.godon@outlook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Email"
+            >
+              <Icon icon={icons.EMAIL} viewBox={bottomIconViewBox} />
+                  </a>
+                    <a
+                      href="https://github.com/egodon"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="GitHub"
+            >
+              <Icon icon={icons.GITHUB} viewBox={bottomIconViewBox} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/egodon"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Linkedin"
+            >
+              <Icon icon={icons.LINKEDIN} viewBox={bottomIconViewBox} />
+                    </a>
+                </Icons>
+                  <Button color="#eee">DOWNLOAD CV</Button>
+              </FooterBottom>
+      </Nav>
+    );
+  }
+}
 
 const Nav = styled.nav`
   background-color: #212121;
