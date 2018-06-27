@@ -27,7 +27,7 @@ export default () => (
       </div>
       <div>
         <img src={paintbrush} alt="paintbrush" />
-        <p>I aim to build beautiful response web pages.</p>
+        <p>I aim to build beautiful responsive web pages.</p>
       </div>
       <div>
         <img src={fuelGauge} alt="fuel-gauge" />
