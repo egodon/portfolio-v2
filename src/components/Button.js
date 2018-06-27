@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+const Button = ({ children, color, ...props }) => (
+  <StyledButton color={color} {...props}>{children}</StyledButton>
+);
+
+const StyledButton = styled.a`
   border: 1px solid ${props => props.color};
   color: ${props => props.color};
-  padding: 1rem 2rem;
+  padding: 1rem 3.6rem;
   background: transparent;
   cursor: pointer;
-  transition: all .1s;
+  transition: all 0.1s;
 
   &:hover {
     opacity: 0.5;
   }
 `;
-
-const Button = ({ children, color }) => <StyledButton color={color}>{children}</StyledButton>;
 
 export default Button;

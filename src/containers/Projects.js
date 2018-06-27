@@ -11,6 +11,7 @@ export default withRouteData(() => (
     <FlexContainer>
       {projects.map(project => (
         <ProjectCard
+          key={project.title}
           title={project.title}
           image={project.image}
           builtWith={project.builtWith}
