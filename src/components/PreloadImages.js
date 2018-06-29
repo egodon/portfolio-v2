@@ -6,10 +6,10 @@ const PreloadImages = ({ section }) => {
     return (
       <Head>
         <link rel="preload" as="image" href="images/chuchat.jpg" />
-        <link rel="preload" as="image" href="images/hackernews.png" />
+        <link rel="preload" as="image" href="images/hackernews.jpg" />
         <link rel="preload" as="image" href="images/linklib.jpg" />
         <link rel="preload" as="image" href="images/scratch.png" />
-        <link rel="preload" as="image" href="images/portfolio.png" />
+        <link rel="preload" as="image" href="images/portfolio.jpg" />
       </Head>
     );
   }
