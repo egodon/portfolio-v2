@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { COLOR_RGB } from 'index.css.js';
 
 const ProjectCard = ({
-  title, builtWith, gitHubLink, demoLink, image,
+  title, subtitle, builtWith, gitHubLink, demoLink, image,
 }) => (
   <Card>
     <CardOverlay className="overlay">
       <h3 className="title">{title}</h3>
+      <h4 className="subtitle">{subtitle}</h4>
       <span className="built-with">Built with:</span>
       <ul>{builtWith.map(tech => <li key={tech}>{tech}</li>)}</ul>
       <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
@@ -58,7 +59,13 @@ const CardOverlay = styled.div`
 
   .title {
     font-size: 2.4rem;
-    margin-bottom: 3rem;
+    margin-bottom: .8rem;
+    font-weight: 400;    
+  }
+
+  .subtitle {
+    margin-bottom: 1.8rem;
+    font-weight: 400;
   }
 
   .built-with {

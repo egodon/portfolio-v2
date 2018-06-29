@@ -1,5 +1,5 @@
 module.exports = {
-  // extends: 'react-tools',
+  extends: 'react-tools',
   rules: {
     "semi": ["warn", "always"],
     "no-use-before-define": 0,

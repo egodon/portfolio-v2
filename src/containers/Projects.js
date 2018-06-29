@@ -13,6 +13,7 @@ export default withRouteData(() => (
         <ProjectCard
           key={project.title}
           title={project.title}
+          subtitle={project.subtitle}
           image={project.image}
           builtWith={project.builtWith}
           gitHubLink={project.gitHubLink}
@@ -43,14 +44,16 @@ const projects = [
   /* PROJECT 1 */
   {
     title: 'React HackerNews',
-    image: 'images/hackernews.png',
+    subtitle: 'A Hackernews client.',
+    image: 'images/hackernews.jpg',
     builtWith: ['React'],
     gitHubLink: 'https://github.com/egodon/react-hacker-news',
     demoLink: 'https://hacker-news.gq/',
   },
   /* PROJECT 2 */
   {
-    title: 'LinkLib',
+    title: 'LinkLibrary',
+    subtitle: 'A website where users can share web development ressources.',
     image: 'images/linklib.jpg',
     builtWith: ['jQuery', 'Sass', 'Express', 'MongoDB'],
     gitHubLink: 'https://github.com/egodon/link-library',
@@ -59,6 +62,7 @@ const projects = [
   /* PROJECT 3 */
   {
     title: 'ChuChat',
+    subtitle: 'A chat app with collaborative drawing.',
     image: 'images/chuchat.jpg',
     builtWith: ['JavaScript', 'Express', 'MongoDB', 'Socket.io'],
     gitHubLink: 'https://github.com/egodon/chat-app',
@@ -67,6 +71,7 @@ const projects = [
   /* PROJECT 4 */
   {
     title: 'Scratch',
+    subtitle: 'A note taking app.',
     image: 'images/scratch.png',
     builtWith: ['React', 'AWS Lambda'],
     gitHubLink: 'https://github.com/egodon/scratch',
@@ -75,7 +80,8 @@ const projects = [
   /* PROJECT 5 */
   {
     title: 'Portfolio',
-    image: 'images/portfolio.png',
+    subtitle: '',
+    image: 'images/portfolio.jpg',
     builtWith: ['React-Static'],
     gitHubLink: 'https://github.com/egodon/portfolio-v2',
     demoLink: 'https://egodon.me',

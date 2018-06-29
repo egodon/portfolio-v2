@@ -36,24 +36,22 @@ export default {
   },
   Document: class CustomHtml extends Component {
     render () {
-      const {
-        Html, Head, Body, children, renderMeta,
-      } = this.props;
+      const { Html, Head, Body, children, renderMeta } = this.props;
 
       return (
         <Html>
           <Head>
             <meta charSet="UTF-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
-                  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
-                    <link rel="manifest" href="/site.webmanifest" />
-                      <meta name="description" content="Evan Godon's porfolio website" />
-                        <meta name="theme-color" content="#ffffff" />
-                          <title>Evan Godon</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <meta name="description" content="Evan Godon's porfolio website" />
+            <meta name="theme-color" content="#ffffff" />
+            <title>Evan Godon</title>
             {renderMeta.styleTags}
           </Head>
-            <Body>{children}</Body>
+          <Body>{children}</Body>
         </Html>
       );
     }
