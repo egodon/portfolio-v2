@@ -20,6 +20,10 @@ export default {
       component: 'src/containers/Projects',
     },
     {
+      path: '/experience',
+      component: 'src/containers/Experience',
+    },
+    {
       path: '/contact',
       component: 'src/containers/Contact',
     },
@@ -48,7 +52,7 @@ export default {
             <link rel="manifest" href="/site.webmanifest" />
             <meta name="description" content="Evan Godon's porfolio website" />
             <meta name="theme-color" content="#ffffff" />
-            <title>Evan Godon</title>
+            <title>Evan Godon | Home</title>
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>

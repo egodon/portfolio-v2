@@ -60,12 +60,10 @@ const CardOverlay = styled.div`
   .title {
     font-size: 2.4rem;
     margin-bottom: .8rem;
-    font-weight: 400;    
   }
 
   .subtitle {
     margin-bottom: 1.8rem;
-    font-weight: 400;
   }
 
   .built-with {

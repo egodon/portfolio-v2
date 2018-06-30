@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Head } from 'react-static';
 import { PageTitle } from './Home';
 import { BREAKPOINT } from '../index.css';
 
@@ -11,6 +12,9 @@ const fuelGauge = 'images/fuel-gauge.svg';
 
 export default () => (
   <About>
+    <Head>
+      <title>Evan Godon | About</title>
+    </Head>
     <PageTitle>About</PageTitle>
     <div className="main">
       <img src={personAtDesk} width={300} alt="person at a desk" className="desk-svg" />
@@ -69,9 +73,8 @@ const Icons = styled.div`
   max-width: 100rem;
 
   @media (max-width: ${BREAKPOINT.SMALL}px) {
-  grid-template-columns: auto;
-  grid-template-rows: repeat(1fr, 4);
-    
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1fr, 4);
   }
 
   div {
@@ -80,6 +83,8 @@ const Icons = styled.div`
     justify-content: flex-start;
     align-items: center;
   }
+
+ 
 
   img {
     max-width: 10rem;

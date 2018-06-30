@@ -12,6 +12,9 @@ const StyledButton = styled.a`
   background: transparent;
   cursor: pointer;
   transition: all 0.1s;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
 
   &:hover {
     opacity: 0.5;

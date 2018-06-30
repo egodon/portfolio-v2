@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-static';
+import { NavLink, Link } from 'react-static';
 import Logo from './Logo';
 import Icon, { icons } from './Icon';
 import Button from './Button';
@@ -21,7 +21,7 @@ class SideBar extends Component {
     return (
       <Nav>
         {this.state.shouldPreloadImages && <PreloadImages section={this.state.sectionHovered} />}
-        <LogoContainer>
+        <LogoContainer to='/'>
           <Logo size={60} />
         </LogoContainer>
         <NavList>
@@ -36,6 +36,10 @@ class SideBar extends Component {
           <StyleNavLink to="/projects" onMouseEnter={() => this.preloadImages('projects')}>
             <Icon icon={icons.CODE} />
             PROJECTS
+          </StyleNavLink>
+          <StyleNavLink to="/experience">
+            <Icon icon={icons.PAPER} className="paper-icon"/>
+            EXPERIENCE
           </StyleNavLink>
         </NavList>
 
@@ -71,7 +75,8 @@ class SideBar extends Component {
             href="https://docs.google.com/document/d/1oRRKbLnIwHAstLXkW2SHXKTz04Ce51gDXKIokOoUQo8/edit?usp=sharing"
             target="_blank"
           >
-            View CV
+            VIEW CV
+            <Icon icon={icons.CHEVERON_RIGHT} className="right-arrow" />
           </Button>
         </FooterBottom>
       </Nav>
@@ -105,10 +110,17 @@ const Nav = styled.nav`
   @media (max-width: ${BREAKPOINT.SMALL}px) {
     position: fixed;
     bottom: 0;
+
+    
+  }
+
+  .paper-icon {
+    position: relative;
+    left: 2px;
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(Link)`
   display: flex;
   justify-content: center;
   align-self: center;
@@ -122,6 +134,10 @@ const LogoContainer = styled.div`
     margin-right: 1rem;
     position: static;
     right: 5px;
+  }
+
+  @media (max-width: ${BREAKPOINT.SMALL}px) {
+    display: none;
   }
 `;
 
@@ -145,6 +161,12 @@ const StyleNavLink = styled(NavLink)`
   @media (max-width: ${BREAKPOINT.MEDIUM}px) {
     padding: 1rem;
     grid-template-columns: auto;
+  }
+
+  @media (max-width: ${BREAKPOINT.MEDIUM}px) {
+    width: 11.5rem;
+    text-align: center;
+    flex: 1;
   }
 
   &::before {
@@ -199,6 +221,12 @@ const FooterBottom = styled.div`
 
   @media (max-width: ${BREAKPOINT.SMALL}px) {
     display: none;
+  }
+
+  .right-arrow {
+    position: relative;
+    top: 2px;
+    left: 3px;
   }
 `;
 

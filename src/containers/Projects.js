@@ -1,13 +1,15 @@
 import React from 'react';
-import { withRouteData } from 'react-static';
+import { Head } from 'react-static';
 import styled from 'styled-components';
 import ProjectCard from 'components/ProjectCard';
 import { PageTitle } from './Home';
 
-export default withRouteData(() => (
+export default () => (
   <Projects>
+    <Head>
+      <title>Evan Godon | Projects</title>
+    </Head>
     <PageTitle>Projects</PageTitle>
-
     <FlexContainer>
       {projects.map(project => (
         <ProjectCard
@@ -22,7 +24,7 @@ export default withRouteData(() => (
       ))}
     </FlexContainer>
   </Projects>
-));
+);
 
 const Projects = styled.div`
   max-width: 180rem;
