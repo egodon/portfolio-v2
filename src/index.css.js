@@ -106,11 +106,13 @@ ol, ul {
   list-style: none;
 }
 
-
 a {
   color: var(--font-color);
   text-decoration: none;
 }
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
 
 `;
 
