@@ -19,9 +19,9 @@ export default () => (
     <div className="main">
       <img src={personAtDesk} width={300} alt="person at a desk" className="desk-svg" />
       <p className="about-text">
-        I'm a front-end web developer who loves creating user interfaces and smooth user
-        experiences. Currently, I enjoy working in the React ecosystem but I am always ready to
-        learn more and take on new challenges.
+        I'm a front-end web developer from Montreal who loves creating user interfaces and awesome
+        user experiences. I love learning new web related technologies and I
+        currently enjoy working with the React and Redux ecosystem.
       </p>
     </div>
     <Icons>
@@ -39,7 +39,7 @@ export default () => (
       </div>
       <div>
         <img src={lines} alt="lines" />
-        <p>I will forever be learning and improving my skills.</p>
+        <p>I continuously seek to improve my developer and design skills.</p>
       </div>
     </Icons>
   </About>
@@ -49,6 +49,7 @@ const About = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.5rem;
 
   .main {
     display: flex;
@@ -68,9 +69,10 @@ const Icons = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-row-gap: 1.8rem;
   justify-items: center;
   width: 100%;
-  max-width: 100rem;
+  max-width: 80rem;
 
   @media (max-width: ${BREAKPOINT.SMALL}px) {
     grid-template-columns: auto;
@@ -78,13 +80,10 @@ const Icons = styled.div`
   }
 
   div {
-    width: 34rem;
+    width: 36rem;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
   }
-
- 
 
   img {
     max-width: 10rem;

@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Head } from 'react-static';
 import { PageTitle } from './Home';
 import Icon, { icons } from '../components/Icon';
 import { COLOR, BREAKPOINT } from '../index.css';
 
 const ExperiencePage = () => (
   <Experience>
+    <Head><title>Evan Godon | Experience</title></Head>
     <PageTitle>Experience</PageTitle>
     <JobContainer>
       <p className="date">January 2018 - Present</p>

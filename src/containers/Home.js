@@ -1,5 +1,5 @@
 import React from 'react';
-import { withSiteData } from 'react-static';
+import { withSiteData, Head } from 'react-static';
 import styled from 'styled-components';
 import SpanAnimate from 'components/SpanAnimate';
 import { BREAKPOINT } from '../index.css';
@@ -8,6 +8,7 @@ const deskImage = 'images/desk.svg';
 
 export default withSiteData(() => (
   <Home>
+    <Head><title>Evan Godon | Home</title></Head>
     <div className="header-container">
       <SpanAnimate delay={1.6}>
         <h1>EVAN GODON</h1>
