@@ -7,7 +7,9 @@ import { COLOR, BREAKPOINT } from '../index.css';
 
 const ExperiencePage = () => (
   <Experience>
-    <Head><title>Evan Godon | Experience</title></Head>
+    <Head>
+      <title>Evan Godon | Experience</title>
+    </Head>
     <PageTitle>Experience</PageTitle>
     <JobContainer>
       <p className="date">January 2018 - Present</p>
@@ -15,6 +17,10 @@ const ExperiencePage = () => (
       <Info>
         <h5>Bmad</h5>
         <h6>Front-End Web Developer</h6>
+        <p>
+          <span className="bold">Tech stack:</span> React, Redux, Redux-Saga, React 360,
+          Styled-components, Jest, Django, Flask, MySQL
+        </p>
         <ul>
           <li>
             <Icon
@@ -33,7 +39,7 @@ const ExperiencePage = () => (
               viewBox={viewBox}
             />
             Responsible for the front-end infrastructure of a web and electron application using
-            React/Redux/Redux-Saga.
+            React.
           </li>
           <li>
             <Icon
@@ -113,6 +119,14 @@ const Info = styled.div`
   h6 {
     font-size: 1.7rem;
     margin-bottom: 1.6rem;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  .bold {
+    font-weight: bold;
   }
 
   li {

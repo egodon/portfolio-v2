@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
 export default {
-  siteRoot: 'https://egodon.me',
+  siteRoot: 'https://egodon.ml',
   getSiteData: () => ({
     title: 'Evan Godon',
   }),
