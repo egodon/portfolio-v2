@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-static';
 import Logo from './Logo';
 import Icon, { icons } from './Icon';
 import Button from './Button';
-import { BREAKPOINT } from '../index.css';
+import { BREAKPOINT, COLOR } from '../index.css';
 import PreloadImages from './PreloadImages';
 
 class SideBar extends Component {
@@ -71,11 +71,10 @@ class SideBar extends Component {
             </a>
           </Icons>
           <Button
-            color="#eee"
             href="https://docs.google.com/document/d/1oRRKbLnIwHAstLXkW2SHXKTz04Ce51gDXKIokOoUQo8/edit?usp=sharing"
             target="_blank"
           >
-            VIEW CV
+            <span>VIEW CV</span>
             <Icon icon={icons.CHEVERON_RIGHT} className="right-arrow" />
           </Button>
         </FooterBottom>
