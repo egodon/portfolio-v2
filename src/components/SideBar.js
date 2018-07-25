@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { NavLink, Link } from 'react-static';
-import Logo from './Logo';
-import Icon, { icons } from './Icon';
+import Logo from './svg/Logo';
+import Icon, { icons } from './svg/Icon';
 import Button from './Button';
-import { BREAKPOINT, COLOR } from '../index.css';
+import { BREAKPOINT } from '../index.css';
 import PreloadImages from './PreloadImages';
 
 class SideBar extends Component {

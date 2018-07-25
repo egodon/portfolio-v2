@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, Link, cleanPath } from 'react-static'
-import { easeSinInOut } from 'd3-ease'
-import { NodeGroup } from 'react-move'
+import { easeSinInOut } from 'd3-ease';
+import { NodeGroup } from 'react-move';
 import { withContext, getContext } from 'recompose'
 import PropTypes from 'prop-types'
 import { hot } from 'react-hot-loader'

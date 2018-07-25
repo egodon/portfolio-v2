@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOR } from '../index.css';
+import { COLOR } from '.../../index.css';
 
 const Logo = ({ size }) => (
   <svg

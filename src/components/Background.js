@@ -2,14 +2,15 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { COLOR } from '../index.css';
 
-
-const swell = keyframes`
-  0%, 100% {
-    transform: translate3d(0,-2px,0);
+const slideDown = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  };
 `;
 
 const Container = styled.div`
@@ -19,15 +20,8 @@ const Container = styled.div`
   width: 100vw;
   z-index: -1;
 
-  #back-wave,
-  #front-wave {
-  }
-
-  svg {
-  }
-
-  #back-wave1 {
-    animation: ${swell} 20s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  .blue-wave {
+    animation: ${slideDown} 1.2s ease-out forwards;
   }
 `;
 
@@ -40,6 +34,7 @@ export default () => (
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlSpace="preserve"
+      className="blue-wave"
       style={{
         fillRule: 'evenodd',
         clipRule: 'evenodd',

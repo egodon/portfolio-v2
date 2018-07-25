@@ -21,7 +21,9 @@ export const icons = {
     'M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z',
 };
 
-const Icon = ({ size, icon, viewBox, className, fillColor }) => (
+const Icon = ({
+  size, icon, viewBox, className, fillColor,
+}) => (
   <svg width={size} height={size} viewBox={viewBox} className={className}>
     <path d={icon} fill={fillColor} />
   </svg>

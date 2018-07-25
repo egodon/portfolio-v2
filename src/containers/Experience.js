@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Head } from 'react-static';
 import { PageTitle } from './Home';
-import Icon, { icons } from '../components/Icon';
+import Icon, { icons } from '../components/svg/Icon';
 import { COLOR, BREAKPOINT } from '../index.css';
 
 const ExperiencePage = () => (

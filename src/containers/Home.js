@@ -2,9 +2,8 @@ import React from 'react';
 import { withSiteData, Head } from 'react-static';
 import styled from 'styled-components';
 import SpanAnimate from 'components/SpanAnimate';
+import DeskSVG from 'components/svg/DeskSVG';
 import { BREAKPOINT } from '../index.css';
-
-const deskImage = 'images/desk.svg';
 
 export default withSiteData(() => (
   <Home>
@@ -17,8 +16,7 @@ export default withSiteData(() => (
         <h2>Front-End Web Developer</h2>
       </SpanAnimate>
     </div>
-
-    <img src={deskImage} alt="desk" />
+    <DeskSVG />
   </Home>
 ));
 
@@ -59,7 +57,7 @@ const Home = styled.main`
     padding: 2px;
   }
 
-  img {
+  svg {
     margin-top: 4rem;
     width: 60rem;
 
