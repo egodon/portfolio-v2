@@ -21,7 +21,7 @@ const Container = styled.div`
   z-index: -1;
 
   .blue-wave {
-    animation: ${slideDown} 1.2s ease-out forwards;
+    animation: ${slideDown} .8s ease-out forwards;
   }
 `;
 

@@ -39,8 +39,8 @@ const Home = styled.main`
   }
 
   h1 {
-    font-size: 4.4rem;
-    letter-spacing: 12px;
+    font-size: 3.6rem;
+    letter-spacing: 14px;
     position: relative;
     left: 4px;
     z-index: -1;
@@ -51,7 +51,7 @@ const Home = styled.main`
   }
 
   h2 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-weight: 300;
     letter-spacing: 4px;
     padding: 2px;
@@ -70,6 +70,7 @@ const Home = styled.main`
 
 export const PageTitle = styled.h2`
   font-size: var(--fs-large);
+  letter-spacing: 3px;
   margin-bottom: 5rem;
   text-align: center;
 `;

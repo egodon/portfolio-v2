@@ -19,7 +19,7 @@ const ExperiencePage = () => (
         <h6>Front-End Web Developer</h6>
         <p>
           <span className="bold">Tech stack:</span> React, Redux, Redux-Saga, React 360,
-          Styled-components, Jest, Django, Flask, MySQL
+          Styled-Components, Jest, Django, Flask, MySQL
         </p>
         <ul>
           <li>
