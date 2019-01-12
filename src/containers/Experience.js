@@ -12,7 +12,7 @@ const ExperiencePage = () => (
     </Head>
     <PageTitle>Experience</PageTitle>
     <JobContainer>
-      <p className="date">January 2018 - Present</p>
+      <p className="date">January 2018 - September 2018</p>
       <img src="images/portfolio-job-line.svg" alt="line" />
       <Info>
         <h5>Bmad</h5>
