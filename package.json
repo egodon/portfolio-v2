@@ -10,7 +10,7 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "d3-ease": "^1.0.3",
     "path": "^0.12.7",
     "react": "^16.0.0",
